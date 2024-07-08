@@ -96,7 +96,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'nyxacademy', 
         'USER': 'postgres',
-        'PASSWORD': 'Harsh1410',
+        'PASSWORD': '#',
         'HOST': '127.0.0.1', 
         'PORT': '5432',
     }

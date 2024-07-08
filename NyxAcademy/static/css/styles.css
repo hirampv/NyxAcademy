@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+.header {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+.header img {
+    max-width: 300px;
+    height: auto;
+}
+.logo {
+    text-align: center;
+    margin: 20px 0;
+}
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.auth {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+.auth-box {
+    border: 1px solid gainsboro;
+    padding: 10px;
+    width: 450px;
+}
+.auth-box form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.auth-box form button {
+    width: 50%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+.auth-links {
+    margin-top: 20px;
+    text-align: center;
+}
+.auth-links a {
+    margin: 0 10px;
+    color: blue;
+    text-decoration: none;
+}
+iframe {
+    width: 350px;
+    height: 600px;
+    border: none;
+}
