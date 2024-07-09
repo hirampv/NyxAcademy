@@ -163,3 +163,5 @@ cython_debug/
 
 # prettier was changing syntax 
 .prettierignore
+
+*/migration
