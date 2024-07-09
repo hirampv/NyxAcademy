@@ -1,8 +1,8 @@
-{% extends 'home/base.html' %} {% block content %}
+{% extends 'home/base.html' %} {% load static %} {% block content %}
 <div class="card">
   <img
-    src="Automation with Ansible.jpg"
-    alt="SaltStack for the absolute Beginners - Practical DevOps"
+    src="{% static 'logos/Automation with Ansible.jpg' %}"
+    alt="Automation with Ansible"
   />
   <div class="card-content">
     <h3>Automation with Ansible</h3>

@@ -1,9 +1,10 @@
 from django.shortcuts import render
-
+from .models import Course
 # Create your views here.
 
 def home(request):
-    return render(request, 'home/home.html')
+    context = Course.objects.all()
+    return render(request, 'home/home.html', {'context':context})
 
 def youtube(request):
     return render(request, 'home/youtube.html')
