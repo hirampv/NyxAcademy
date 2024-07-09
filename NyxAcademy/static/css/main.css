@@ -11,6 +11,16 @@ nav {
   height: 50px;
 }
 
+.logout {
+  background-color: #349cfb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
@@ -62,10 +72,11 @@ nav a {
 }
 .card-content h3 {
   margin-top: auto;
+  margin-bottom: 0.5rem;
 }
 .card-content h6 {
   color: grey;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 .card a {
