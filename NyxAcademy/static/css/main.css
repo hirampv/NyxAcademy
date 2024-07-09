@@ -45,8 +45,8 @@ nav a {
   text-align: center;
 }
 .card img {
-  max-height: 100%;
-  width: auto;
+  max-height: 200px;
+  max-width: 200px;
 }
 .card-content {
   display: flex;
