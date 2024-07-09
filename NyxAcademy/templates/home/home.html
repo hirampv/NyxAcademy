@@ -1,14 +1,16 @@
 {% extends 'home/base.html' %} {% block content %} 
 {% if context %} 
 {% for course in context %}
+<a href="{{course.link}}" target="_blank" ></a>
 <div class="card">
-  <a href="{{course.link}}" target="_blank" >
+  
     <img src="{{course.image}}" alt="{{course.title}}" />
     <div class="card-content">
       <h3>{{course.title}}</h3>
       <p>{{course.description}}</p>
       <h6>{{course.creator}}</h6>
     </div>
-  </a>
+ 
 </div>
+</a>
 {% endfor %} {% endif %} {% endblock %}

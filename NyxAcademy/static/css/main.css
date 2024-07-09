@@ -15,10 +15,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  text-decoration: none;
-}
-
 nav a {
   color: #349cfb;
   padding: 5px 10px;
@@ -43,6 +39,7 @@ nav a {
 
 .card {
   display: flex;
+  flex-direction: row;
   align-items: space-between;
   justify-content: justify;
   margin: 30px;
@@ -69,4 +66,8 @@ nav a {
 .card-content h6 {
   color: grey;
   margin-bottom: 10px;
+}
+
+.card a {
+  color: black;
 }
