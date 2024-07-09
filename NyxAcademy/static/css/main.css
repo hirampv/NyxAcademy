@@ -11,8 +11,15 @@ nav {
   height: 50px;
 }
 
-nav a {
+a {
   text-decoration: none;
+}
+
+p {
+  text-decoration: none;
+}
+
+nav a {
   color: #349cfb;
   padding: 5px 10px;
   font-weight: bold;

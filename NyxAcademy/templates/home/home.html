@@ -1,6 +1,8 @@
-{% extends 'home/base.html' %} {% block content %}
+{% extends 'home/base.html' %} {% block content %} 
+{% if context %} 
+{% for course in context %}
 <div class="card">
-  <a href="{{course.link}}">
+  <a href="{{course.link}}" target="_blank" >
     <img src="{{course.image}}" alt="{{course.title}}" />
     <div class="card-content">
       <h3>{{course.title}}</h3>

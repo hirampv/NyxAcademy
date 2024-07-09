@@ -7,4 +7,4 @@ class Course(models.Model):
     image = models.TextField()
     link = models.TextField()
     def __str__(self):
-        return self.name
+        return self.title
