@@ -23,14 +23,23 @@
                 <div class="col-lg-6">
                   <div class="card-body p-md-5 mx-md-4">
                     <div class="text-center">
-                      <img
+                        <a href="https://www.thinknyx.com/">
+                            <img
                         src="{% static 'logos/thinknyx-logo.png' %}"
                         style="width: 185px"
                         alt="logo"
                       />
+                        </a>
+
+                        
                       <br /><br />
-                      <h4 class="mt-1 mb-5 pb-1">You Trust, We Deliver!</h4>
+                      
+
+                        <img src="{% static 'logos/nyxacademy-logo.png' %}" style="width: 185px" alt="nyxacademy-logo">
+
+
                     </div>
+                    <br>
                     <form method="post" action="{% url 'account_login' %}">
                       {% csrf_token %}
                       <!-- {{ form.as_p }} -->
