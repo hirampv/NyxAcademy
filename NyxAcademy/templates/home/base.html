@@ -15,9 +15,9 @@
         class="logo"
       />
 
-      <a href="#" class="udemy">Udemy</a>
-      <a href="#" class="books">Books</a>
-      <a href="#" class="youtube">Youtube</a>
+      <a href="{% url 'home' %}" class="udemy">Udemy</a>
+      <a href="{% url 'books' %}" class="books">Books</a>
+      <a href="{% url 'youtube' %}" class="youtube">Youtube</a>
     </nav>
     {% block content %} {% endblock }
   </body>
