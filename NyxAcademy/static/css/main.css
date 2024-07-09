@@ -11,6 +11,16 @@ nav {
   height: 50px;
 }
 
+.logout {
+  background-color: #349cfb;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 a {
   text-decoration: none;
 }
