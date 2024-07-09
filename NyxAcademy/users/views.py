@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import Course
-# Create your views here.
+
+
+def login(request):
+    return render(request, 'account/login.html')
 
 def home(request):
     context = Course.objects.all()
@@ -11,3 +14,4 @@ def youtube(request):
 
 def books(request):
     return render(request, 'home/books.html')
+
