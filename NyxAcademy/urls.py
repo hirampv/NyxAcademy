@@ -19,7 +19,7 @@ from django.urls import path, include
 from users import views as user_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('nyx-admin/', admin.site.urls),
     path('home/', user_views.home, name='home'),
     path('accounts/', include('allauth.urls')),
     path('youtube/', user_views.youtube, name='youtube'),
