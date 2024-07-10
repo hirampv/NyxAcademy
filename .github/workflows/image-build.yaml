@@ -22,5 +22,5 @@ jobs:
         password: ${{secrets.GHCR_TOKEN}}
     - name: Build the Docker image
       run: |
-        docker image build . --file Dockerfile --tag ghcr.io/thinknyx-technologies-llp/nyxacademy:$(date +%s)
-        docker image push ghcr.io/thinknyx-technologies-llp/nyxacademy:$(date +%s)
+        docker image build . --file Dockerfile --tag ghcr.io/thinknyx-technologies-llp/nyxacademy:latest
+        docker image push ghcr.io/thinknyx-technologies-llp/nyxacademy:latest
