@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import Course
-# Create your views here.
+
+
+def login(request):
+    return render(request, 'account/login.html')
 
 def login(request):
     return render(request, 'account/login.html')
@@ -17,3 +20,4 @@ def youtube(request):
 
 def books(request):
     return render(request, 'home/books.html')
+
