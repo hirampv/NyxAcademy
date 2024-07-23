@@ -44,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sites', 
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google'
+    # 'allauth.socialaccount',
+    # 'allauth.socialaccount.providers.google'
 ]
 
 
@@ -85,42 +85,24 @@ WSGI_APPLICATION = 'NyxAcademy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+DATABASES = {
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('PGDATABASE'), 
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'HOST': os.environ.get('PGHOST'), 
+        'PORT': os.environ.get('PGPORT'),
+    }
+}
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'nyxacademy', 
-#         'USER': 'postgres',
-#         'PASSWORD': 'admin',
-#         'HOST': '127.0.0.1', 
-#         'PORT': '5432',
-#     }
-# }
-
-# DATABASES = {
-
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': os.environ.get('PGDATABASE'), 
-#         'USER': os.environ.get('PGUSER'),
-#         'PASSWORD': os.environ.get('PGPASSWORD'),
-#         'HOST': os.environ.get('PGHOST'), 
-#         'PORT': os.environ.get('PGPORT'),
-#     }
-# }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation
@@ -178,4 +160,4 @@ ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 
-RUN_SERVER_PORT = 8080
+RUN_SERVER_PORT = 8000
