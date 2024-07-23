@@ -11,7 +11,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,8 +27,7 @@ SECRET_KEY = 'django-insecure-fre6239x1j@=cov_79src)rtn1^6xqvpobips2=ql5qj8ri#_7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -43,8 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sites', 
     'allauth',
     'allauth.account',
-    # 'allauth.socialaccount',
-    # 'allauth.socialaccount.providers.google'
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google'
 ]
 
 
@@ -84,23 +85,24 @@ WSGI_APPLICATION = 'NyxAcademy.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+DATABASES = {
+
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ.get('PGDATABASE'), 
+        'USER': os.environ.get('PGUSER'),
+        'PASSWORD': os.environ.get('PGPASSWORD'),
+        'HOST': os.environ.get('PGHOST'), 
+        'PORT': os.environ.get('PGPORT'),
+    }
+}
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'nyxacademy', 
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
-    }
-}
 
 
 # Password validation
@@ -153,8 +155,9 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 
+RUN_SERVER_PORT = 8000

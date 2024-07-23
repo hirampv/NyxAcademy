@@ -14,5 +14,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: 'Login to GitHub Container Registry'
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{github.actor}}
+        password: ${{secrets.GHCR_TOKEN}}
     - name: Build the Docker image
-      run: docker image build . --file Dockerfile --tag kulbhushanmayer/nyxacademy:$(date +%s)
+      run: |
+        docker image build . --file Dockerfile --tag ghcr.io/thinknyx-technologies-llp/nyxacademy:latest
+        docker image push ghcr.io/thinknyx-technologies-llp/nyxacademy:latest

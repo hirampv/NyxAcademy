@@ -1,9 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Course
 
 
 def login(request):
     return render(request, 'account/login.html')
+
+def login(request):
+    return render(request, 'account/login.html')
+
+# def signup(request):
+#     return redirect('account_signup')
 
 def home(request):
     context = Course.objects.all()
