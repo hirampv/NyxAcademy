@@ -129,6 +129,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+*nyxenv
 
 # Spyder project settings
 .spyderproject
@@ -164,4 +165,4 @@ cython_debug/
 # prettier was changing syntax 
 .prettierignore
 
-*/migration
+*/migrations
