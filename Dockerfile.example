@@ -5,9 +5,9 @@ RUN apt-get install -y python3-django-allauth python3-psycopg2
 WORKDIR /app
 COPY . /app
 EXPOSE 8000
-ENV PGHOST postgres
-ENV PGPORT 5432
-ENV PGDATABASE postgres
-ENV PGUSER postgres
-ENV PGPASSWORD postgres
+ENV PGHOST=postgres
+ENV PGPORT=5432
+ENV PGDATABASE=postgres
+ENV PGUSER=postgres
+ENV PGPASSWORD=postgres
 CMD ["sh", "startup.sh"]
